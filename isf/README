@@ -1,0 +1,21 @@
+
+==========================================================
+QUICK COMMANDS
+===========
+To Compile: make
+To execute: ./ISF <topos/triangle
+=========== 
+==========================================================
+ISF.c is the code. In main, there is a LOT of commented out stuff, as I would test functions and phases independently. 
+As we say in the military, BLUF (bottom line up front) the functions of interest are void runISF_orig(...) line 1740. That is the function that creates an ISF table. In there it calls our reset functions, dijstrka's , makeISF(...), makeSPT, makeSubTree_v2 (version 1 was bad). Probably the most important to goto first.
+
+Next are Traverse_steady(...) and traverse_no_fail(), probably the 2 basic traverse functions to build from for this new idea.
+
+Third: A lot of "print" helper functions, compares, to help see if tables changed I think. 
+
+For clarity the stuff that probably can be ignored for this are The remaining Functions called runISF____, basically the phase change ones with different ways to do an ISF and traverse____to______ are those intermediary heterogeneous stage/phases to see if loops in unordered updates would occur.
+
+I will try to filter out a cleaner version and maybe a "main" that runs it better.
+
+Compiling and just running on a topo.txt file as is will show it runs. Output was just for making sure/checking for statuses as it ran. The number something would stop at, I could infer some errors sometimes.
+

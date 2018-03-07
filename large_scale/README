@@ -1,0 +1,7 @@
+How to execute: 
+
+./validate -f topos/triangle -p 0 -v 1 >triangle.output.txt >>triangle.error.txt
+
+-f: file name for inputting the topology
+-p: prints the ISF and keylink table entries 
+-v: for verifying if loops can occur in the current topology
